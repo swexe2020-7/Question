@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   def index
+      @qestions = Question.all
   end
 
   def new
