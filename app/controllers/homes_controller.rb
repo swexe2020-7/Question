@@ -9,10 +9,10 @@ class HomesController < ApplicationController
   
   def create
     user = User.find_by(uid: session[:login_uid])
-    @home = Home.new(message: params[:tweet][:message], user_id:user.id)
+    @home = Home.new(message: params[:home][:message], user_id:user.id, tdate: Time.current)
     if @home.save
-      flash[:info] = "ツイートを追加しました"
-      redirect_to tweets_path
+      flash[:info] = "投稿完了"
+      redirect_to homes_path
     else
       render :new
     end
@@ -21,7 +21,7 @@ class HomesController < ApplicationController
   def destroy
     home = Home.find(params[:id])
     home.destroy
-    flash[:info] = "ツイートを削除しました"
+    flash[:info] = "投稿削除"
     redirect_to homes_path
   end
 end

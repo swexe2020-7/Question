@@ -1,6 +1,3 @@
 class Home < ApplicationRecord
-    belongs_to :user
-    has_many :likes
-    has_many :like_users, through: :likes, source: :user
-    validates :message, presence: true
+    validates :message, presence:true, length: {maximum: 140}
 end
