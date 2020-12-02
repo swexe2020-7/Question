@@ -8,14 +8,13 @@ class HomesController < ApplicationController
   end
   
   def create
-    user = User.find_by(uid: session[:login_uid])
-    @home = Home.new(message: params[:home][:message], user_id:user.id, tdate: Time.current)
-    if @home.save
-      flash[:info] = "投稿完了"
-      redirect_to homes_path
-    else
-      render :new
-    end
+        @home = Home.new(message: params[:home][:message], tdate: Time.current)
+        if @home.save
+            flash[:notice] = '1レコード追加しました。'
+            redirect_to '/' 
+        else
+            render 'new'
+        end
   end
 
   def destroy
@@ -24,4 +23,14 @@ class HomesController < ApplicationController
     flash[:info] = "投稿削除"
     redirect_to homes_path
   end
+end
+def update
+        @home = Home.find(params[:id])
+        @home.update(message: params[:tweet][:message], tdate: Time.current)
+        if @home.save
+            flash[:notice] = '1レコード変更しました。'
+            redirect_to '/' 
+        else
+            render 'new'
+        end 
 end

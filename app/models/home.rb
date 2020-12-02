@@ -1,3 +1,4 @@
 class Home < ApplicationRecord
-    validates :message, presence:true, length: {maximum: 140}
+    validates :message, presence: true
+    validates :message, length: {maximum: 1000}
 end

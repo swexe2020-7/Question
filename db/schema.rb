@@ -10,9 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_25_045917) do
+ActiveRecord::Schema.define(version: 2020_12_02_061140) do
 
   create_table "homes", force: :cascade do |t|
+    t.string "message"
+    t.datetime "tdate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -23,12 +25,6 @@ ActiveRecord::Schema.define(version: 2020_11_25_045917) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_likes_on_user_id"
-  end
-
-  create_table "quests", force: :cascade do |t|
-    t.string "messerge"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
-  get 'homes/index'
-  get 'homes/new'
-  get 'logins/login_from'
-  get 'logins/login'
-  get 'logins/logout'
-  get 'likes/create'
-  get 'likes/destroy'
-  get 'users/index'
-  get 'users/new'
-  get 'questions/index'
-  get 'questions/new'
-  get 'questions/create'
-  get 'questions/destroy'
-  get 'questions/index'
+  resources :homes
+    root 'homes#index'
+    get 'homes/index'
+    get 'homes/new',to: 'homes#new'
+    post 'homes', to: 'homes#create'
+    delete 'homes/:id', to: 'homes#destroy'
+    get 'homes/:id' , to: 'homes#show'
+    get 'homes/:id/edit', to: 'homes#edit'
+    patch 'homes/:id', to: 'homes#update'
+    
+  
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
