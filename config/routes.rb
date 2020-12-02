@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'users#index'
   get 'users/index'
   get 'users/new'
   get 'questions/index'
@@ -6,5 +7,5 @@ Rails.application.routes.draw do
   get 'questions/create'
   get 'questions/destroy'
   get 'questions/index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users
 end
