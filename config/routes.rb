@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :homes
     root 'homes#index'
     get 'homes/index'
@@ -13,3 +14,15 @@ Rails.application.routes.draw do
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+=======
+  root 'users#index'
+  get 'users/index'
+  get 'users/new'
+  get 'questions/index'
+  get 'questions/new'
+  get 'questions/create'
+  get 'questions/destroy'
+  get 'questions/index'
+  resources :users
+end
+>>>>>>> 55cad86ef181f7731cfda939ffb93d5c4808eae8
