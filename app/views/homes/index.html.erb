@@ -2,8 +2,11 @@
 <p>
     こちらは質問投稿サイトです!!!
 </p>
-
+    <% if current_user %>
+     <%= link_to 'ログアウト', logins_logout_path, class: "CRUD" %>
+     <% else %>
     <%= link_to 'ログイン' , logins_login_form_path, class: "CRUD"%>
+     <% end %>
     <%= link_to '新規登録' , new_user_path, class: "CRUD"%>
     <%= link_to '検索' , homes_new_path, class: "CRUD"%>
     <%= link_to '投稿' , homes_new_path, class: "CRUD"%>

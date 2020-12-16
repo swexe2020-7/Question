@@ -9,10 +9,10 @@ class ReplysController < ApplicationController
   end
   
   def create
-        @reply = Reply.new(hennshin: params[:reply][:hennshin] )
+        @reply = Reply.new(hennshin: params[:hennshin] )
         if @reply.save
             
-            redirect_to homes_path
+            redirect_to '/'
         else
             render 'new'
         end

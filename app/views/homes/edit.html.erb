@@ -8,9 +8,7 @@
 
 <%= form_for @home ,message:{action: :update} do |f| %>
 
-<%= f.label :message, 'タイトル' %>
- <%= f.text_field :message %>
- <br>
+
  <%= f.label :message, '投稿' %>
  <p>
  <%= f.text_area :message %>

@@ -1,4 +1,4 @@
-<h1>Replys#new</h1>
+<h1>投稿返信ページ</h1>
 <ul>
  <% @reply.errors.full_messages.each do |rep| %>
   <li><%= rep %></li>
@@ -12,8 +12,8 @@
  <br>
  <%= f.label :message, '投稿' %>
  <p>
- <%= f.text_area :message %>
+ <%= f.hennshin :message %>
  </p>
  
- <%= link_to '返信', '/' %>
+ <%= f.submit '返信' %>
 <% end %>

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
   get 'replys/index'
-  get 'replys/new'
-  get 'replys/create'
+  post 'replys/new',to: "replys#create"
+  get 'replys/new' 
+  
   resources :homes
     root 'homes#index'
     get 'homes/index'
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   
     get 'logins/login_form'
     post 'logins/login'
-    
+    get 'logins/logout'
   resources :users
     root 'users#index' 
     get 'users/index'
