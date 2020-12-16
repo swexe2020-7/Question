@@ -25,6 +25,13 @@ class UsersController < ApplicationController
     user.destroy
     flash[:info] = "ユーザを削除しました"
     redirect_to users_path
-
+  end
+  
+  def search
+    if params[:uid].present?
+      @users = User.where('uid LIKE ?', "%#{params[:uid]}%")
+    else
+      @users = User.none
+    end
   end
 end

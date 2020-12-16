@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'homes/search'
+  get 'users/search'
   resources :homes
   resources :users
     root 'homes#index'
@@ -11,4 +13,8 @@ Rails.application.routes.draw do
     patch 'homes/:id', to: 'homes#update'
     get 'logins/login_form'
     post 'logins/login'
+    get 'logins/logout'
+    resources :homes do
+    get :search, on: :collection
+    end
   end
