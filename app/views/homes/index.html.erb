@@ -18,4 +18,14 @@
     <% @homes.each do |t| %>
     <tr>
     <tb><%= t.message %> </tb>
+    <% time = ((Time.current.to_i - t.tdate.to_i) / 60) %>
+     
+     <%= "#{time}分前" %>
+    <br>
+     <%= link_to '削除', home_path(t.id), method: :delete, class: "CRUD" %>
+     <%= link_to '表示', home_path(t.id), class: "CRUD" %>
+     <%= link_to '編集', edit_home_path(t.id), class: "CRUD" %>
+     
+ </p>
+
     <% end %>

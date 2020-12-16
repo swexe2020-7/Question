@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_02_061140) do
+ActiveRecord::Schema.define(version: 2020_12_09_050024) do
 
   create_table "homes", force: :cascade do |t|
     t.string "message"
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 2020_12_02_061140) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
+  create_table "replies", force: :cascade do |t|
+    t.string "hennshin"
+    t.integer "home_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

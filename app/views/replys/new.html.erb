@@ -1,0 +1,19 @@
+<h1>Replys#new</h1>
+<ul>
+ <% @reply.errors.full_messages.each do |rep| %>
+  <li><%= rep %></li>
+ <% end %>
+</ul>
+
+
+<%= form_for replys_new_path , hennshin:{action: :create} do |f| %>
+
+
+ <br>
+ <%= f.label :message, '投稿' %>
+ <p>
+ <%= f.text_area :message %>
+ </p>
+ 
+ <%= link_to '返信', '/' %>
+<% end %>

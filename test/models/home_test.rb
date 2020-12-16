@@ -1,7 +1,4 @@
-require 'test_helper'
-
-class HomeTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+class Home < ApplicationRecord
+    validates :message, presence: true
+    validates :message, length: {maximum: 1000}
 end
