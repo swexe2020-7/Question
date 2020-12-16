@@ -1,0 +1,17 @@
+<p>
+    <strong>メッセージ：</strong>
+    <%= @home.message %>
+</p>
+
+<p>
+    <strong>日付：</strong>
+    <%= @home.tdate %>
+</p>
+
+<% r = Reply.where(home_id: @home.id)
+r.each do |f|%>
+ <p> <%= f.hennshin %>
+ </p>
+<% end %>
+<%= link_to '返信', replys_new_path %>
+<%= link_to 'Back','/' %>

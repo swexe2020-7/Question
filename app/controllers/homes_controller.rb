@@ -1,7 +1,7 @@
 class HomesController < ApplicationController
- def index
-    @homes = Home.all
- end
+  def index
+     @homes = Home.all
+  end
 
   def new
     @home = Home.new
@@ -23,14 +23,26 @@ class HomesController < ApplicationController
     flash[:info] = "投稿削除"
     redirect_to homes_path
   end
-end
-def update
+  
+   def show
         @home = Home.find(params[:id])
-        @home.update(message: params[:tweet][:message], tdate: Time.current)
+   end
+   
+   
+   def edit
+        @home = Home.find(params[:id])
+   end
+  
+ 
+  
+  def update
+        @home = Home.find(params[:id])
+        @home.update(message: params[:home][:message], tdate: Time.current)
         if @home.save
             flash[:notice] = '1レコード変更しました。'
             redirect_to '/' 
         else
             render 'new'
         end 
+  end
 end

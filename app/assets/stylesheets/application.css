@@ -1,5 +1,4 @@
 .CRUD {
-  font-size:x-large;
   color: #fff;
   border: 2px solid #fff;
   border-radius: 0;
@@ -11,10 +10,11 @@
 }
 
 .CRUD:hover {
-     font-size:x-large;
+    
      -webkit-transform: translate(0, -2px);
      transform: translate(0, -2px);
      color: #fff;
      -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
      box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
 }
+
