@@ -12,7 +12,7 @@ class ReplysController < ApplicationController
         @reply = Reply.new(hennshin: params[:reply][:hennshin] )
         if @reply.save
             
-            redirect_to '/' 
+            redirect_to homes_path
         else
             render 'new'
         end

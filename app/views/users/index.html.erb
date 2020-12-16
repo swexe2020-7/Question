@@ -1,16 +1,11 @@
-<h1>ユーザー一覧</h1>
+<h1>ユーザー登録完了</h1>
 
 <% if flash[:info] %>
  <font color="green"><%= flash[:info] %></font>
 <% end %>
 
-<% @users.each do |e| %>
- <p>
-  <%= e.uid %>
-  
- </p>
-<% end %>
+
 
 <hr>
 
-<%= link_to 'ユーザー追加', new_user_path %>
+<%= link_to '戻る', homes_path %>

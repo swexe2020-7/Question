@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     get 'homes/:id/edit', to: 'homes#edit'
     patch 'homes/:id', to: 'homes#update'
   
+    get 'logins/login_form'
+    post 'logins/login'
     
   resources :users
     root 'users#index' 

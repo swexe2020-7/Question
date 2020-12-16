@@ -11,8 +11,10 @@ class UsersController < ApplicationController
     p = BCrypt::Password.create(params[:user][:pass])
     @user = User.new(uid: params[:user][:uid], pass: p)
     if @user.save
-
+      
+      
       flash[:info] = "ユーザを登録しました"
+      flash[:info] = "ユーザーを登録しました"
 
       redirect_to users_path
     else
