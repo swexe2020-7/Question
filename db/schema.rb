@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2020_12_09_050024) do
   create_table "replies", force: :cascade do |t|
     t.string "hennshin"
     t.integer "home_id"
+    t.datetime "tdate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

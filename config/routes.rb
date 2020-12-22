@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  get 'replys/index'
+  post'replys/new' ,to: "replys#create"
+  get 'replys/new'
   get 'homes/search'
   get 'users/search'
   resources :homes
+  resources :users
     root 'homes#index'
     get 'homes/index'
     get 'homes/new',to: 'homes#new'
