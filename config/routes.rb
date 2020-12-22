@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   get 'replys/index'
   post 'replys/new',to: "replys#create"
   get 'replys/new' 
   
+=======
+  get 'homes/search'
+  get 'users/search'
+>>>>>>> de20e72e6049a099ad40990ae26544aa81c158c9
 =======
   get 'homes/search'
   get 'users/search'
@@ -23,6 +28,7 @@ Rails.application.routes.draw do
     post 'logins/login'
     get 'logins/logout'
 <<<<<<< HEAD
+<<<<<<< HEAD
   resources :users
     root 'users#index' 
     get 'users/index'
@@ -34,8 +40,13 @@ end
 
   
 =======
+=======
+>>>>>>> de20e72e6049a099ad40990ae26544aa81c158c9
     resources :homes do
     get :search, on: :collection
     end
   end
+<<<<<<< HEAD
+>>>>>>> de20e72e6049a099ad40990ae26544aa81c158c9
+=======
 >>>>>>> de20e72e6049a099ad40990ae26544aa81c158c9

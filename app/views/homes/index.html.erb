@@ -2,22 +2,15 @@
 <p>
     こちらは質問投稿サイトです!!!
 </p>
-<<<<<<< HEAD
+
     <% if current_user %>
      <%= link_to 'ログアウト', logins_logout_path, class: "CRUD" %>
      <% else %>
     <%= link_to 'ログイン' , logins_login_form_path, class: "CRUD"%>
      <% end %>
-=======
+ 
 
 
-<p>
-    <% if current_user %>
-     <%= link_to 'ログアウト', logins_logout_path, class: "CRUD"%>
-    <% else %>
-     <%= link_to 'ログイン' , logins_login_form_path, class: "CRUD"%>
-    <% end %>
->>>>>>> de20e72e6049a099ad40990ae26544aa81c158c9
     <%= link_to '新規登録' , new_user_path, class: "CRUD"%>
     <%= link_to '検索' , search_homes_path, class: "CRUD"%>
     <%= link_to '投稿' , homes_new_path, class: "CRUD"%>
