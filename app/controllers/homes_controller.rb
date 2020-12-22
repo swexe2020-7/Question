@@ -3,26 +3,26 @@ class HomesController < ApplicationController
      @homes = Home.all
   end
 
-  def new
+ def new
     @home = Home.new
-  end
+ end
   
-  def create
-        @home = Home.new(message: params[:home][:message], tdate: Time.current)
-        if @home.save
-            flash[:notice] = '1レコード追加しました。'
-            redirect_to '/' 
-        else
-            render 'new'
-        end
-  end
+ def create
+    @home = Home.new(message: params[:home][:message], tdate: Time.current)
+    if @home.save
+        flash[:notice] = '1レコード追加しました。'
+        redirect_to '/' 
+    else
+        render 'new'
+    end
+ end
 
-  def destroy
+ def destroy
     home = Home.find(params[:id])
     home.destroy
     flash[:info] = "投稿削除"
     redirect_to homes_path
-  end
+ end
   
    def show
         @home = Home.find(params[:id])
@@ -45,5 +45,13 @@ class HomesController < ApplicationController
         else
             render 'new'
         end 
+  end
+  
+  def search
+    if params[:message].present?
+      @homes = Home.where('message LIKE ?', "%#{params[:message]}%")
+    else
+      @homes = Home.none
+    end
   end
 end
