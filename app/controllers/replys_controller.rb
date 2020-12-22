@@ -12,7 +12,7 @@ class ReplysController < ApplicationController
         @reply = Reply.new(hennshin: params[:hennshin] )
         if @reply.save
             
-            redirect_to '/'
+            redirect_to homes_path
         else
             render 'new'
         end
@@ -22,13 +22,13 @@ class ReplysController < ApplicationController
     home = Home.find(params[:id])
     home.destroy
     flash[:info] = "投稿削除"
-    redirect_to homes_path
+    redirect_to homes_show_path
   end
   
    
   def update
         @reply = Reply.find(params[:id])
-        @reply.update(message: params[:home][:message], tdate: Time.current)
+        @reply.update(hennshin: params[:hennshin], tdate: Time.current)
         if @reply.save
             flash[:notice] = '1レコード変更しました。'
             redirect_to '/' 
@@ -37,4 +37,3 @@ class ReplysController < ApplicationController
         end 
   end
 end
-
