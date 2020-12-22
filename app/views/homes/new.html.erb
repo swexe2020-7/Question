@@ -1,4 +1,5 @@
-
+<div class="first">
+<h1>Post page</h1>
 <ul>
  <% @home.errors.full_messages.each do |msg| %>
   <li><%= msg %></li>
@@ -8,17 +9,20 @@
 
 
 <%= form_for @home ,message:{action: :create} do |f| %>
-
-
- <br>
- <%= f.label :message, '投稿' %>
- <p>
- <%= f.text_area :message %>
- </p>
- <br>
+<div class="box17">
  <%= f.label :tdate, '日付' %>
  <br>
  <%= tdate = Time.current %>
  <br>
- <%= f.submit '投稿する' %>
+ </div>
+ <div class="aaa">
+ <br>
+ <%= f.label :message, '投稿' %>
+ </div>
+ 
+ <%= f.text_area :message ,size: "100x20" %>
+ 
+ 
+ <%= f.submit '投稿する', class:"CRUD" %>
 <% end %>
+</div>

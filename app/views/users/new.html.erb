@@ -1,4 +1,6 @@
-<h1>ユーザー登録</h1>
+
+
+<h1>User registration</h1>
 
 <% if @user.errors.present? %>
 <font color="red">
@@ -21,6 +23,6 @@
     <%= f.text_field :pass %>
 </p>
 <p>
-    <%= f.submit '登録' %>
+    <%= f.submit '登録' , class:"CRUD" %>
 </p>
 <% end %>

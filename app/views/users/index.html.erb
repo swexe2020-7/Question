@@ -1,4 +1,6 @@
-<h1>ユーザー登録完了</h1>
+
+
+<h1>User registration completed</h1>
 
 <% if flash[:info] %>
  <font color="green"><%= flash[:info] %></font>
@@ -8,4 +10,5 @@
 
 <hr>
 
-<%= link_to '戻る', homes_path %>
+<%= link_to '戻る', homes_path , class:"CRUD"%>
+

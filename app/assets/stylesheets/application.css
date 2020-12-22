@@ -1,4 +1,6 @@
 .CRUD {
+    
+    font-size:15px;
   color: #fff;
   border: 2px solid #fff;
   border-radius: 0;
@@ -10,7 +12,7 @@
 }
 
 .CRUD:hover {
-    
+    font-size:15px;
      -webkit-transform: translate(0, -2px);
      transform: translate(0, -2px);
      color: #fff;
@@ -18,3 +20,84 @@
      box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
 }
 
+h1 {
+    font-family: 'Amatic SC', cursive;
+    position: relative;
+    background: #fff0cd;
+    box-shadow: 0px 0px 0px 5px #fff0cd;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
+}
+
+h2 {
+    color: white;
+    font-weight: 700;
+    font-family: 'Amatic SC', cursive;
+    margin:2em 0;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+
+
+.waku {
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    background: #d6ebff;
+    box-shadow: 0px 0px 0px 10px #d6ebff;
+    border: dashed 2px white;
+}
+
+.box17 {
+    color: white;
+    font-weight: 700;
+    margin:2em 0;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+
+.box17:before, .box17:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+}
+.box17:before {left: 10px;}
+.box17:after {right: 10px;}
+.box17 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.aaa{
+    font-weight: 700;
+    font-size: 30px;
+    border-bottom: solid 3px #87CEFA;
+}
+
+.first{
+   background-image: url('cafe.jpg');
+   background-size: cover;
+}
+
+.box24 {
+    font-weight: 700;
+    font-size: 20px;
+     padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #fff8e8;
+    border-left: solid 10px #ffc06e;
+}
+
+.box24 p {
+    margin: 0; 
+    padding: 0;
+}

@@ -1,3 +1,4 @@
+<h1>Edit page</h1>
 <ul>
  <% @home.errors.full_messages.each do |msg| %>
   <li><%= msg %></li>
@@ -18,5 +19,5 @@
  <br>
  <%= tdate = Time.current %>
  <br>
- <%= f.submit '投稿する' %>
+ <%= f.submit '投稿する' , class:"CRUD"%>
 <% end %>
