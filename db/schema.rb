@@ -19,17 +19,10 @@ ActiveRecord::Schema.define(version: 2020_12_09_050024) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "likes", force: :cascade do |t|
-    t.string "content"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_likes_on_user_id"
-  end
-
   create_table "replies", force: :cascade do |t|
     t.string "hennshin"
     t.integer "home_id"
+    t.datetime "tdate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
